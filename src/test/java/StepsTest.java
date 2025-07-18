@@ -15,6 +15,12 @@ public class StepsTest {
     private static String REPOSITORY = "OJIbKa07/demoqa_tests_36";
     private static int ISSUE = 1;
 
+    @BeforeAll
+    static void basicBrowserSettings() {
+        Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadStrategy = "eager";
+    }
+
     @Test
     public void testLamdaStep(){
         SelenideLogger.addListener("allure", new AllureSelenide());
