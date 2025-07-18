@@ -1,7 +1,6 @@
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Condition;
 
 import static com.codeborne.selenide.Selectors.withText;
@@ -25,9 +24,7 @@ public class SelenideTest {
         $(linkText("OJIbKa07/demoqa_tests_36")).click();
         $("#issues-tab").click();
         $(withText("#1")).should(Condition.exist);
-
     }
-
 }
 
 
